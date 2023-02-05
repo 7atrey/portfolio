@@ -1,0 +1,63 @@
+// .logo-container {
+//     z-index: 0;
+//     width: 400px;
+//     height: 609px;
+//     position: absolute;
+//     top: 50px;
+//     bottom: 0;
+//     left: 120%;
+//     margin: auto;
+
+//     svg {
+//         width: 100%;
+//         height: auto;
+//         bottom: 0;
+//         transform: rotateZ(30deg) !important;
+//     }
+
+//     .solid-logo {
+//         position: absolute;
+//         top: auto;
+//         right: auto;
+//         bottom: auto;
+//         left: 0;
+//         margin: auto;
+//         width: 100%;
+//         opacity: 1;
+//         transform: rotateZ(30deg);
+//         z-index: 1;
+//     }
+// }
+
+// .svg-container {
+//     stroke: #ffd700;
+//     stroke-width: 10px;
+// }
+
+$violet: rgba(204, 22, 22, 0.741);
+$blue: rgb(0, 4, 242);
+
+body { background: rgb(0, 0, 0); }
+
+.orb {
+    position: absolute;
+    bottom: 40px;
+    left: 120%;
+    animation:spin 4s linear infinite;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    margin-top: 140px;
+    border-radius: 45%;
+    box-shadow:
+        inset 0 0 50px #fff,
+        inset 20px 0 60px $violet,
+        inset -20px 0 60px $blue,
+        inset 20px 0 300px $violet,
+        inset -20px 0 300px $blue,
+          0 0 50px #fff,
+          -10px 0 60px $violet,
+          10px 0 60px $blue;
+}
+
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
